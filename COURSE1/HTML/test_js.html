@@ -1,9 +1,8 @@
-
 <html>
 
 <head>
 
-    
+
 
 
 </head>
@@ -12,34 +11,66 @@
 
 <body>
 
-<p id="p1" name="n1"> Hi </p>
+  <p id="p1" name="n1"> Hi </p>
 
-<form method="GET">
+  <form method="GET">
     <textarea name="feedback">dsd sdsds </textarea>
-    <input id="sub" type="submit" >
-</form>
+    <input id="sub" type="submit">
+  </form>
 
 </body>
 
 <script>
-       var x1 = document.getElementById("p1");
-        x1.innerText = "Hello";
-        x1.style.color = "red";
+  var y = "hello";
 
 
-        document.writeln("today is Friday");
+  var x1 = document.getElementById("p1");
+  x1.innerText = "Hello";
+  x1.style.color = "red";
 
-       // document.getElementById("sub").click();
 
-       var abc=18;
+  document.writeln("today is Friday");
 
-       
+  // document.getElementById("sub").click();
 
-       function f1(){
+  var abc = 18;
 
-         var xyz=18;
-       }
+  let xyz = 18;
 
-    </script>
+
+  function f1() {
+
+    let xyz = 19;
+    alert("y=" + y);
+    alert("xyz=" + xyz);
+  }
+
+
+  f1();
+
+  alert("xyz=" + xyz);
+
+</script>
+
+
+<script>
+
+  class Teacher {
+
+    constructor(name, exp) {
+      this.name = name;
+      this.exp = exp;
+    }
+
+    f1(){
+      console.log("Hi In side Teacher's f1 method");
+    }
+
+  };
+
+  let teacher1 = new Teacher("Dan", 12);
+  teacher1.f1();
+
+</script>
 
 </html>
