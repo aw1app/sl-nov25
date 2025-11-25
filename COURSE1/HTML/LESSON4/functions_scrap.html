@@ -1,0 +1,156 @@
+<html>
+
+<script>
+
+    function f1(a, b) {
+
+        statement 1;
+        statement2;
+        statement 3;
+
+        return x;
+    }
+
+
+    let result = f1(7, 8);
+
+    f1(17, 8);
+
+    f1(7, 33);
+
+
+    function add(a=100,b){
+        let c = a+ b;
+        return c;
+    }
+
+    let result1 =add(5,6);
+
+    let result2 =add(6); // 106
+
+</script>
+
+<script>
+    f1(17, 8); 
+</script>
+
+
+
+<script>
+    // Demo functions as Objects
+
+    function Student(name,age){
+        this.name=name;
+        this.age=age;
+
+        this.getName = function(){
+            return this.name;
+        }
+    }
+
+    let s1 = new Student("Bill",25);
+    console.log(s1.getName()); // "Bill"
+
+</script>
+
+
+<script>
+    // Demo functions as Objects
+
+    class Teacher{
+
+        constructor(name,age){
+        this.name=name;
+        this.age=age;
+        }
+
+        getName = function(){
+            return this.name;
+        }
+    }
+
+    let t1 = new Teacher("John Major",35);
+    console.log(t1.getName()); // "John Major"
+
+</script>
+
+
+<script>
+
+    function greet(x,y,name){
+        ///////
+        /// if( visitor is from Fr)
+        y(name); // x is a callback function
+        //else
+        x(name);
+    }
+
+    function greetInEnglish(a){
+        console.log("Hello " +  a);
+    }
+
+    function greetInFrench(a){
+        console.log("Bonjour " +  a);
+    }
+
+
+   greet(greetInEnglish,greetInFrench,"Bill");
+
+
+</script>
+
+
+<script>
+// Function Returning Function
+
+function f2(){
+
+    let x1 = function() { console.log("Hey")};
+
+    return x1;
+
+};
+
+f2(); // Hey
+
+
+</script>
+
+
+
+<script>
+// Arrow functions demo (modern JS ES 6 version..)
+// Traditional JS function defn
+function f31(x,y){
+    let c = x+y;
+    c = c *10;
+    return c;
+}
+
+let res1 = f31(4,5); // 90
+
+// Arrow JS function defn
+let f32 = (x,y)  => {
+    let c = x+y;
+    c = c *10;
+    return c;
+}
+
+let res2 = f32(4,5); // 90
+
+function f33(x,y){
+    return x+y;
+}
+
+let f33 =(x,y) => x+y; //
+
+
+function f34(x){
+    return x+10;
+}
+// above f34 can be written
+let f34 = x => x+10;
+
+</script>
+
+</html> 
